@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Website</title>
+	<link rel="stylesheet" type="text/css" href="styles1.css">
+</head>
+<body>
+	<h1>Welcome to My Website</h1>
+	<p>This is a paragraph of text.</p>
+	<img src="image.jpg" alt="An image">
+
+
+<ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+
+<ol>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ol>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Gender</th>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>25</td>
+    <td>Male</td>
+  </tr>
+  <tr>
+    <td>Jane</td>
+    <td>30</td>
+    <td>Female</td>
+  </tr>
+</table>
+
+<br>
+<form>
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" placeholder="name here"><br>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email"><br>
+<input type="number" id="mobile" name="mobile">
+
+  <label for="message">Message:</label>
+  <textarea id="message" name="message"></textarea><br>
+
+  <input type="submit" value="Submit">
+</form>
+
+<br><br>
+
+<button name="hider" id="id_hider" onclick="hideeer()" value="">Hide</button>
+<div class="container" id="main-content">
+  <h1 class="title">Welcome to my website</h1>
+  <p class="description">This is a website about HTML and CSS.</p>
+  <article></article>
+</div>
+<br><br>
+<!--  javascript na dinhi -->
+
+<input type="" name="firstNum" id="firstN">
+<input type="" name="secondNum" id="secondN">
+<input type="button" name="add" id="addN" value="Add" onclick="addNumbers()">
+<br><br>
+<label name="sum1" style="background-color: skyblue;padding: 10px;margin: 5px;" id="showsum"></label>
+<script type="text/javascript">
+
+var test1 = "hello world";
+//var test1 = hello; comment
+let anotherVariable = 42;
+const PI = 3.14159;
+
+function addNumbers(){
+  //return num1 + num2;
+  var num1 = parseFloat(document.getElementById("firstN").value);
+  var num2 = parseFloat(document.getElementById("secondN").value);
+  var sum = num1 + num2;
+  //document.getElementById("showsum").value = sum;
+  showsum.innerText = sum;
+console.log(sum);
+//var txt_val; //Initialize variable 
+//txt_val = document.getElementById('txt1').value; 
+//alert(txt_val); 
+//lblcharAt.innerText = txt_val.charAt(0);
+//label1.innerText=txt_val;
+//lblstrl.innerText = txt_val.length;
+
+}
+//let result = addNumbers(2, 3);
+//console.log(result); 
+
+
+//name="hider" id="id_hider" display: block;
+function hideeer(){
+	var x = document.getElementById("main-content");
+if (x.style.display === "none") {
+	x.style.display = "block";
+	document.getElementById("id_hider").innerText = "Hide";
+}else{
+	x.style.display = "none";
+	document.getElementById("id_hider").innerText = "Show";
+}
+
+}
+
+</script>
+
+
+
+
+<br><br>
+
+<h1>JavaScript Operators</h1> 
+ <h2>a=10; b=20 z=40; x=60; y=40; w=16;</h2> 
+ <input type="button" onclick="cal_opr();" value="Find Operator usage"> 
+ <div id="d1"></div> 
+ <script> 
+  function cal_opr() 
+  { 
+   var a = 10; 
+   var b = 20; 
+   var z = 40; 
+   var x = 60; 
+   var y = 40; 
+   var w = 16; 
+ 
+   var c = (a + b); //c=30 
+   var d = (b - a); //d=10 
+   z++; //z=z+1 => z=41 
+   x--; //x=x-1 => x=59 
+   y += 3; //y=y+3 => y=43 
+   w -= 5; //w=w-5 => w=11 
+ 
+   var e = a * b; //e=200 
+   var f = a / b; //f=0.5 
+   var g = a % b; //g=10   b/a, then get remainder
+ 
+   var all_txt = ""; 
+ 
+   all_txt = "<br>a+b : " + c; 
+   var text1 = "hello";
+   var text2 = " ";
+   var text3 = "world";
+   var text4 = text1+text2+text3;
+   document.getElementById("text4show").innerText = text4;
+   all_txt = all_txt + "<br>b-a : " + d; 
+   all_txt = all_txt + "<br>z++ (z=z+1): " + z; 
+   all_txt = all_txt + "<br>x-- (x=x-1): " + x; 
+ 
+   all_txt = all_txt + "<br>y+=3 (y=y+3): " + y; 
+   all_txt = all_txt + "<br>w-=5 (w=w-5): " + w; 
+ 
+   all_txt = all_txt + "<br>a*b : " + e; 
+   all_txt = all_txt + "<br>a/b : " + f; 
+   all_txt = all_txt + "<br>a%b : " + g; 
+   document.getElementById("d1").innerHTML = all_txt; 
+  } 
+
+/*
+let myNumber = 42;
+
+<, && and, || or, ==, !=, <=, >=
+== 5==5 true
+=== 5==='5' false
+if (myNumber > 50) {
+  console.log("My number is greater than 50.");
+} else {
+  console.log("My number is less than or equal to 50.");
+}
+
+
+for (let i = 0; i < 5; i++) {
+  console.log(i);
+  alert("hellowww");
+}
+
+let i = 0;
+while(i < 5){
+	console.log(i);
+	alert("hellowww");
+	i++;
+}
+
+let i = 0;
+do{
+	console.log(i);
+	alert("hellowww");
+	i++;
+}
+while(i < 5);
+
+
+*/
+
+
+
+</script> 
+<br>
+<label id="text4show"></label>
+
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+.parallax {
+  /* The image used */
+  background-image: url("img_parallax.jpg");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+div.divlist{
+  display: inline-block;
+  background-color: aquamarine;
+  padding: 1%;
+  text-align: center;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.ulist1{
+  text-align: left;
+  display: inline-block;
+  background-color: blue;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.li1{
+  float: left;
+  background-color: skyblue;
+  border-color: rgb(240, 240, 240);
+  padding: 10px;
+  text-align: center;
+  
+}
+
+.link1{
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+.link1:hover{
+  background-color: lightgreen;
+  text-decoration: underline;
+  border-radius: 5px;
+  padding: 4px;
+  font-weight: bold;
+}
+
+.hometitle{
+  font-size: 120%;
+  font-style: bold;
+  color: white;
+}
+
+
+.active{
+  background-color: yellow;
+  font-weight: bold;
+}
+
+.divprice{
+  background: rgb(255, 236, 93);
+  border-radius: 8px;
+  font-weight: bold;
+  padding: 2%;
+  margin: 1.5%;
+}
+
+.c_options{
+  background: skyblue;
+  border-radius: 8px;
+  font-weight: bold;
+  padding: 2%;
+  text-align: center;
+  margin: 1%
+}
+
+/*
+
+a:active{
+  background-color: white;
+  font-weight: bold;
+}
+
+*/
+
+[class*="link1"]{
+width: 100%;
+}
+
+
+@media (max-width:768px){
+    body{background: red;}
+    .link1{
+        background-color: white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+}
+@media (min-width:768px){
+    body{background: blue;}
+}
+
+  
+
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image {
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.image img {
+  width: 100px;
+  height: 100px;
+  border: none;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.image span {
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.image.selected {
+  transform: scale(1.1) translateY(-10px);
+  z-index: 1;
+}
+
+.image:not(.selected) {
+  filter: brightness(70%);
+  transition: all 0.2s ease-in-out;
+}
+
+.image:not(.selected):hover {
+  filter: brightness(100%);
+  transform: translateY(-5px);
+}
+
+div {
+  color: skyblue;
+}
